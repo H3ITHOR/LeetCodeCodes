@@ -3,7 +3,7 @@
  * @return {number}
  */
 var maxProfit = function(prices) {
-    let minPrice = Infinity;
+    let minPrice = 10000000;
     let maxProfit = 0;
 
     for (let i = 0; i < prices.length; i++) {
