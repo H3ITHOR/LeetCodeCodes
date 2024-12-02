@@ -1,14 +1,12 @@
-/**
- * @param {number[]} nums
- * @return {boolean}
- */
 var containsDuplicate = function(nums) {
-    let set = new Set();
-    for(let i = 0; i < nums.length; i++){
-        if(set.has(nums[i])){
+    let seen = {};
+
+    for (let num of nums) {
+        if (seen[num]) {
             return true;
         }
-        set.add(nums[i]);
+        seen[num] = true;
     }
+
     return false;
 };
