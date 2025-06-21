@@ -3,8 +3,9 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
-    for (let i = 0; i < x.toString().length / 2; i++){
-        if (x.toString()[i] !== x.toString()[x.toString().length - (i+1)]){
+    x = x.toString();
+    for (let i = 0; i < x.length / 2; i++){
+        if (x[i] !== x[x.length - (i+1)]){
             return false;
         }
     }
